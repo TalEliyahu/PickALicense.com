@@ -1,0 +1,114 @@
+<!-- Author: Filip Todorov www.filiptodorov.com -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+        <title>Pick a License</title>
+        <link rel="shortcut icon" href="img/favicon.ico" />
+
+    </head>
+
+    <body>
+
+        <div class="header">
+            <div class="container">
+                <h1>Pick a license</h1>
+                <h2>Pick and import the best license for your open source project</h2>
+                <div class="pull-right hidden-xs">
+                    <iframe src="https://ghbtns.com/github-btn.html?user=Singapore-Tech-Entrepreneurs&repo=Pick-A-License&type=watch&v=2" frameborder="0" scrolling="0" width="80px" height="20px"></iframe>
+                    <iframe src="https://ghbtns.com/github-btn.html?user=Singapore-Tech-Entrepreneurs&repo=Pick-A-License&type=star" frameborder="0" scrolling="0" width="80px" height="20px"></iframe>
+                </div>
+            </div>
+        </div>
+
+        <div class="main">
+            <div class="container">
+              <div *ngIf="state=='beginning'">
+                  <h1>It's easy to get caught up in code.</h1>
+                  <p class="explanation1">Sharing your code isn't everything, though: it's also <span>!important</span> to tell people how they can use that code.</p>
+                  <div class="buttons">
+                      <a (click)="setState('quiz')" class="btn btn-primary btn-lg">Ok, Let's start!</a>
+                      <a href="#" class="btn btn-default faq">I am confused. What should I do?</a>
+
+                  </div>
+              </div>
+              <div *ngIf="state=='quiz'">
+                  <div class="main-question active" style="display: block;">
+                      <h3>{{question.question}}</h3>
+                      <div class="material-switch">
+                          <input (click)='switch()' id="question1" name="question1" type="checkbox" checked/>
+                          <label for="question1" class="label-default"></label>
+                      </div>
+                   <div class="explanation">
+                          <div class="yes">{{hint}}</div>
+                      </div>
+
+                  </div>
+                  <div (click)="setAnswer()" class="buttons v2 btn btn-primary btn-lg">Next Step</div>
+              </div>
+              <div *ngIf="state=='end'">
+                <div *ngIf="license != 'own'">
+                    <h2>License Generated</h2>
+                    <p>The most recommended license for you is <b>{{license}}</b>.</p>
+                    <p class="smaller">You can download the file <a href="{{getLicense()}}">here</a>, and upload it to your project by yourself.<br>Or you can simply import it to your Github Project by clicking <a href="#">here</a>.</p>
+                </div>
+                <div *ngIf="license == 'own'">
+                  <h2>You need your own license</h2>
+                </div>
+              </div>
+            </div>
+
+        </div>
+
+        <script async defer src="https://buttons.github.io/buttons.js"></script>
+        <script>
+            $(".question b").click(function(e) {
+                e.preventDefault();
+                if(!$(this).parent().hasClass("active")) {
+                    $(".question.active span").slideToggle();
+                    $(".question.active").removeClass("active");
+                    $(this).parent().addClass("active");
+                    $(this).parent().children("span").slideToggle();
+                } else {
+                    $(this).parent().removeClass("active");
+                    $(this).parent().children("span").slideToggle();
+                }
+            })
+            $(".faq").click(function(e) {
+                e.preventDefault();
+                $(".sidebar").addClass("active");
+                return false;
+            })
+            $(".closeSidebar").click(function(e) {
+                e.preventDefault();
+                $(".sidebar").removeClass("active");
+            })
+            $(".sidebar .tabs li a").click(function(e) {
+                e.preventDefault();
+                $(".sidebar .tabs li").removeClass("active");
+                $(this).parent().addClass("active");
+                if($(this).attr('href') == '#users') {
+                    $("#projectOwners").hide();
+                    $("#users").fadeIn();
+                } else {
+                    $("#users").hide();
+                    $("#projectOwners").fadeIn();
+                }
+            })
+            $(document).click(function(e) {
+                var target = $(e.target), article;
+                if(!target.parents().is(".sidebar") && !target.is(".sidebar")) {
+                    if($(".sidebar").hasClass("active")) {
+                        $(".sidebar").removeClass("active");
+                    }
+                }
+            })
+        </script>
+
+    </body>
+</html>

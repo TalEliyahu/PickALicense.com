@@ -1,0 +1,319 @@
+<!-- Author: Filip Todorov www.filiptodorov.com -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+        <meta name="author" content="Filip Todorov">
+        <title>Pick a License</title>
+        <link rel="shortcut icon" href="img/favicon.ico" />
+        <!-- Bootstrap -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+                <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+                <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+              <![endif]-->
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="js/jquery-1.12.3.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="js/bootstrap.min.js"></script>
+    </head>
+
+    <body>
+
+        <div class="header">
+            <div class="container">
+                <h1>Pick a license</h1>
+                <h2>Pick and import the best license for your open source project</h2>
+                <div class="pull-right hidden-xs">
+                    <a class="github-button" href="https://github.com/ntkme/github-buttons" data-icon="octicon-star" aria-label="Star ntkme/github-buttons on GitHub" data-size="large">Star</a>
+                    <a class="github-button" href="https://github.com/ntkme/github-buttons/fork" data-icon="octicon-repo-forked" aria-label="Fork ntkme/github-buttons on GitHub" data-size="large">Fork</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="main">
+            <div class="container">
+                <div class="main-questions">
+                    
+                    <div class="main-question">
+                        <h3>This is a new question and you should answer it okay?</h3>
+                        <div class="material-switch">
+                            <input id="question2" name="question2" type="checkbox" checked/>
+                            <label for="question2" class="label-default"></label>
+                        </div><!--
+                     --><div class="explanation">
+                            <div class="no">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, unde. Consequuntur voluptates expedita soluta fuga!</div>
+                            <div class="yes">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit ratione, repudiandae animi deserunt mollitia, inventore ipsum cumque possimus facilis architecto.</div>
+                        </div>
+                    </div>
+                    <div class="main-question">
+                        <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus itaque deserunt, nulla id ex alias in incidunt cum voluptatum porro.?</h3>
+                        <div class="material-switch">
+                            <input id="question3" name="question3" type="checkbox" checked/>
+                            <label for="question3" class="label-default"></label>
+                        </div><!--
+                     --><div class="explanation">
+                            <div class="no">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, unde. Consequuntur voluptates expedita soluta fuga!</div>
+                            <div class="yes">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit ratione, repudiandae animi deserunt mollitia, inventore ipsum cumque possimus facilis architecto.</div>
+                        </div>
+                    </div>
+                    <div class="last-step">
+                        <h2>License Generated</h2>
+                        <p>The most recommended license for you is <b>MIT</b>.</p>
+                        <p class="smaller">You can download the file <a href="#">here</a>, and upload it to your project by yourself.<br>Or you can simply import it to your Github Project by clicking <a href="#">here</a>.</p>
+                    </div>
+                    <div class="buttons v2">
+                        <a href="questions.html" class="btn btn-primary btn-lg nextStep">Next Step</a>
+                    </div>
+                </div><!--
+             --><div class="answered-questions">
+
+                </div>
+            </div>
+            <xmp>
+                <nav class="navbar navbar-inverse">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                            <a class="navbar-brand" href="index.html"><img src="img/logo.png"></a>
+                        </div>
+                        <div id="navbar" class="collapse navbar-collapse navbar-right">
+                            <ul class="nav navbar-nav">
+                                <li>
+                                    <a href="#">
+                                        <img src="img/icons/003-placeholder.png"><!--
+                                     --><span>Places to Visit</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="img/icons/002-cocktail.png"><!--
+                                     --><span>Fun Events</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="img/icons/001-star.png"><!--
+                                     --><span>Top To-Do</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--/.nav-collapse -->
+                    </div>
+                </nav>
+
+                <div class="map-area">
+                    <div class="sidebar active">
+                        <a href="#" class="closeSidebar"></a>
+                        <div class="inside-scrollbar">
+                            <div class="image" style="background:url('img/restaurant.jpg') center no-repeat;background-size:cover;" id="fieldImage">
+                                <h1 id="fieldName">Location title here</h1>
+                                <div class="label label-restaurant original" id="fieldType">Restaurant</div>
+                                <div class="button-links">
+                                    <a href="#" class="addToFavourites" data-toggle="tooltip" data-placement="left" title="Add to favourites"><i class="fa fa-fw fa-star-o"></i></a>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="info">
+                                <div>
+                                    <b>Description</b>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quae molestiae a aut nobis consectetur nemo, ea tenetur accusantium reiciendis?</p>
+                                </div>
+                                <div>
+                                    <b>Speciality</b>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quae molestiae a aut nobis consectetur nemo.</p>
+                                </div>
+                                <div>
+                                    <b>Price <span>$3 - $5</span></b>
+                                </div>
+                            </div>
+                            <div class="rating">
+                                <div>4 <span>votes</span></div>
+                                <a href="#" class="voteUp">Vote Up</a>
+                                <a href="#" class="directions">Directions</a>
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="similar-events">
+                                <div class="event">
+                                    <div class="image" style="background:url('img/restaurant1.jpg') center no-repeat;background-size:cover;"></div>
+                                    <div class="title">Similar Event</div>
+                                </div><!--
+                             --><div class="event">
+                                    <div class="image" style="background:url('img/restaurant2.jpg') center no-repeat;background-size:cover;"></div>
+                                    <div class="title">Similar Event</div>
+                                </div>
+                            </div>
+                            <div class="share">
+                                <h3>Share</h3>
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-fw fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-fw fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-fw fa-instagram"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-fw fa-youtube"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="upload">
+                                <b>Do you have an image from this place?</b>
+                                <div class="drag-and-drop">
+                                    <input type="file">
+                                    <img src="img/icons/upload.png">
+                                    <p>Drag your image here, and we will save it!</p>
+                                </div>
+                            </div>
+                            <div class="notes">
+                                <b><i class="fa fa-fw fa-sticky-note"></i> Leave notes/feedback</b>
+                                <textarea class="form-control"></textarea>
+                                <a href="#">Save it</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content active">
+                        <div class="top-line">
+                            <div class="switch" data-toggle="tooltip" data-placement="bottom" title="We want to provide 5 best for those on budget and 5 best of everything for those that will be off-budget (have more money to spend)">
+                                <input type="checkbox" id="id-name--1" name="set-name" class="switch-input">
+                                <label for="id-name--1" class="switch-label">
+                                    Budget
+                                    <span class="toggle--on">On</span>
+                                    <span class="toggle--off">Off</span>
+                                </label>
+                            </div>
+                            <a href="#" class="eventsToggler">
+                                <div class="line"></div>
+                                <div class="line"></div>
+                                <div class="line"></div>
+                            </a>
+                            <ul class="events">
+                                <li><a href="#" class="label label-none">All Events</a></li>
+                                <li><a href="#" class="label label-restaurant">Restaurant</a></li>
+                                <li><a href="#" class="label label-coffee">Coffee</a></li>
+                                <li><a href="#" class="label label-hangout">HangOuts</a></li>
+                                <li><a href="#" class="label label-hostel">Hostels</a></li>
+                                <li><a href="#" class="label label-dessert">Dessert</a></li>
+                                <li><a href="#" class="label label-club">Clubs</a></li>
+                            </ul>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="updatingTheMap notactive">
+                            <i class="fa fa-fw fa-circle-o-notch fa-spin"></i>
+                            <h2>Updating the map...</h2>
+                            <p>Please keep calm. We are updating the map with the places you will like mostly.</p>
+                        </div>
+                        <div id="google-map"></div>
+                        <div class="slider-bottom">
+                            <div class="name">Top Recommended Places</div>
+                            <div class="owl-carousel owl-theme" id="mainSlider">
+                                <div class="item" data-name="The Restaurant Name3">
+                                    <div class="image" style="background:url('img/restaurant1.jpg') center no-repeat;">
+                                        <h3>The Restaurant Name3</h3>
+                                    </div>
+                                </div>
+                                <div class="item" data-name="The Restaurant Name2">
+                                    <div class="image" style="background:url('img/restaurant2.jpg') center no-repeat;">
+                                        <h3>The Restaurant Name2</h3>
+                                    </div>
+                                </div>
+                                <div class="item" data-name="The Restaurant Name2">
+                                    <div class="image" style="background:url('img/restaurant4.jpg') center no-repeat;">
+                                        <h3>The Restaurant Name2</h3>
+                                    </div>
+                                </div>
+                                <div class="item" data-name="The Restaurant Name1">
+                                    <div class="image" style="background:url('img/restaurant.jpg') center no-repeat;">
+                                        <h3>The Restaurant Name1</h3>
+                                    </div>
+                                </div>
+                                <div class="item" data-name="The Restaurant Name4">
+                                    <div class="image" style="background:url('img/bar1.jpg') center no-repeat;">
+                                        <h3>The Restaurant Name4</h3>
+                                    </div>
+                                </div>
+                                <div class="item" data-name="The Restaurant Name5">
+                                    <div class="image" style="background:url('img/bar2.jpg') center no-repeat;">
+                                        <h3>The Restaurant Name5</h3>
+                                    </div>
+                                </div>
+                                <div class="item" data-name="The Coffee Bar 1">
+                                    <div class="image" style="background:url('img/bar1.jpg') center no-repeat;">
+                                        <h3>The Coffee Bar 1</h3>
+                                    </div>
+                                </div>
+                                <div class="item" data-name="The Coffee Bar 2">
+                                    <div class="image" style="background:url('img/bar2.jpg') center no-repeat;">
+                                        <h3>The Coffee Bar 2</h3>
+                                    </div>
+                                </div>
+                                <div class="item" data-name="The Coffee Bar 3">
+                                    <div class="image" style="background:url('img/bar3.jpg') center no-repeat;">
+                                        <h3>The Coffee Bar 3</h3>
+                                    </div>
+                                </div>
+                                <div class="item" data-name="The Coffee Bar 4">
+                                    <div class="image" style="background:url('img/bar4.jpg') center no-repeat;">
+                                        <h3>The Coffee Bar 4</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="otherSlider" style="display: block;width:100%;">
+                                <div class="owl-carousel owl-theme"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </xmp>
+        </div>
+
+
+        <script async defer src="https://buttons.github.io/buttons.js"></script>
+        <script>
+            $(document).on("change", ".material-switch input", function(e) {
+                e.preventDefault();
+                if($(this).is(":checked")) {
+                    $(this).parent().siblings(".explanation").children(".no").hide();
+                    $(this).parent().siblings(".explanation").children(".yes").fadeIn(100);
+                } else {
+                    $(this).parent().siblings(".explanation").children(".yes").hide();
+                    $(this).parent().siblings(".explanation").children(".no").fadeIn(100);
+                }
+            })
+            var arrayOfResults = [];
+            var step = 0, totalQuestions = $('.main-question').length;
+            $(".nextStep").click(function(e) {
+                e.preventDefault();
+                var value;
+                if(step < totalQuestions) {
+                    if($(".main-question.active").children(".material-switch").children("input").is(":checked")) {
+                        value = 'yes';
+                    } else {
+                        value = 'no';
+                    }
+                    var text = $(".main-question.active").children("h3").text();
+
+                    // Add it as answered
+                    if(value == 'yes') {
+                        var checked = ' checked';
+                    } else {
+                        var checked = '';
+                    }
+                    $(".answered-questions").append('<div class="answered-question"><h3>'+ text +'</h3><div class="material-switch smaller"><input id="question'+ step + step +'" name="question'+ step + step +'" type="checkbox" '+checked+'/><label for="question'+ step + step +'" class="label-default"></label></div></div>')
+
+                    arrayOfResults.push(value);
+                    $(".main-question.active").removeClass("active").hide().next().addClass("active").fadeIn(200);
+                    step++;
+                    if(step == totalQuestions) {
+                        $(this).hide(0);
+                    }
+                }
+            })
+        </script>
+
+    </body>
+</html>

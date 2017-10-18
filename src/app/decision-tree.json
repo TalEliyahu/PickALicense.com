@@ -1,0 +1,267 @@
+{
+  "label": null,
+  "question": "May your source code be used for commercial purposes?",
+  "yes": "Your code may be included in other software, which is distributed for a charge (e.g. Eset NOD 32 Antivirus)",
+  "no": "Your code may not be included in paid software, other people cannot sublicense your code for a charge.",
+  "children":
+  [
+    {
+      "label": "yes",
+      "question": "May your source code be included in proprietary software?",
+      "yes": "If your code is included in such software, its owner has no duty to provide anyone the source code of his/her software. (e.g. Opera Browser)",
+      "no": "If your code is included in such software, its owner is obliged to provide the source code of his/her software to anyone.",
+      "children": [
+        {
+          "label": "yes",
+          "question": "If may, does your source code of such distributed software need to be disclosed?",
+          "yes": "You may oblige other people to disclose source code of their own software if such software includes your own source code.",
+          "no": "You may provide other people a freedom to solve: to disclose or not disclose the source code of their own software.",
+          "children": [
+            {
+              "label": "yes",
+              "question": "Do you allow to modify your source code",
+              "yes": "Users of your code have a right to change it, make derivative software based on your code.",
+              "no": "Users of your code do not have a right to change it or make derivative software. They have a right to use it only in the form which was received from you.",
+              "children":[
+                {
+                  "label": "yes",
+                  "question": "Do you require to mark made changes in case of modification?",
+                  "yes": "If somebody changes your code, he/she needs to state such changes (in any form, e.g. changelog, comments in source code, additional documentation file, etc.).",
+                  "no": "If somebody changes your code, he/she is not obliged to state such changes (in any form, e.g. changelog, comments in source code, etc.).",
+                  "children":[
+                    {
+                      "label": "yes",
+                      "question": null,
+                      "license": "GNU GPL v3"
+                    },
+                    {
+                      "label": "no",
+                      "question": null,
+                      "license": "own"
+                    }
+                  ]
+                },
+                {
+                  "label": "no",
+                  "question": null,
+                  "license": "own"
+                }
+              ]
+            },
+            {
+              "label": "no",
+              "question": "Do you allow to modify your source code",
+              "yes": "Users of your code have a right to change it, make derivative software based on your code.",
+              "no": "Users of your code do not have a right to change it or make derivative software. They have a right to use it only in the form which was received from you.",
+              "children":[
+                {
+                  "label": "yes",
+                  "question": "Do you require to mark made changes in case of modification?",
+                  "yes": "If somebody changes your code, he/she needs to state such changes (in any form, e.g. changelog, comments in source code, additional documentation file, etc.).",
+                  "no": "If somebody changes your code, he/she is not obliged to state such changes (in any form, e.g. changelog, comments in source code, etc.).",
+                  "children":[
+                    {
+                      "label": "yes",
+                      "question": "Do you require to display your copyright on this source code, if it is included in other product",
+                      "yes": "If anyone uses your code, he/she is obliged to inform other users that he/she really use your code by providing the info about your copyright and license related to such your source code. See a link about:license in your Firefox browser as an examplle.",
+                      "no": "If anyone uses your code, he/she may (but is not obliged) to inform other users that he/she really use your code by providing the info about your copyright and license related to such your source code.",
+                      "children":[
+                        {
+                          "label": "yes",
+                          "question": "Do you wish to provide users with your source code on 'as is' basis (without any warranties)?",
+                          "yes": "You will provide a warranty to users of your code about its stability, errorless, commercial value, etc.",
+                          "no": "You will not provide any warranty to users of your code about its stability, errorless, commercial value, etc, and so, would not be liable for any its disadvantage.",
+                          "children": [
+                            {
+                              "label": "yes",
+                              "question": "Do you wish to limit your liability against users of your source code?",
+                              "yes": "You may limit your civil and monetary liability.",
+                              "no": "You are ready to be liable for any damages or losses of other people who use your code in accordance with applicable law.",
+                              "children":[
+                                {
+                                  "label": "yes",
+                                  "question": null,
+                                  "license": "own"
+                                },
+                                {
+                                  "label": "no",
+                                  "question": "Do you extremely need a short license?",
+                                  "yes": "Some licenses have a short text, which is enough for many use cases by other people. But they do not usually cover specific use cases (e.g. trademark and patents rights).",
+                                  "no": "You would like to cover by license text as many use cases as possible. And a long license text is not problem for you and your users.",
+                                  "children":[
+                                    {
+                                      "label": "yes",
+                                      "question": null,
+                                      "license": "own"
+                                    },
+                                    {
+                                      "label": "no",
+                                      "question": "Do you wish to require other users to distribute their product (with included your source code in it) under the same license terms as yours one?",
+                                      "yes": "You chose a license. A user created a software and included your source code in it. You may obliged him/her to distribute such his/her software under the same license as your own one.",
+                                      "no": "You chose a license. A user created a software and included your source code in it. You would like to provide such user a freedom of choice the license for his/her software.",
+                                      "children":[
+                                        {
+                                          "label": "yes",
+                                          "question": null,
+                                          "license": "GNU LGPL v3.0"
+                                        },
+                                        {
+                                          "label": "no",
+                                          "question": null,
+                                          "license": "Apache License 2.0"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "label": "no",
+                              "question": null,
+                              "license": "own"
+                            }
+                          ]
+                        },
+                        {
+                          "label": "no",
+                          "question": null,
+                          "license": "own"
+                        }
+                      ]
+                    },
+                    {
+                      "label": "no",
+                      "question": "Do you require to display your copyright on this source code, if it is included in other product",
+                      "yes": "If anyone uses your code, he/she is obliged to inform other users that he/she really use your code by providing the info about your copyright and license related to such your source code. See a link about:license in your Firefox browser as an examplle.",
+                      "no": "If anyone uses your code, he/she may (but is not obliged) to inform other users that he/she really use your code by providing the info about your copyright and license related to such your source code.",
+                      "children":[
+                        {
+                          "label": "yes",
+                          "question": "Do you wish to provide users with your source code on 'as is' basis (without any warranties)",
+                          "yes": "You will provide a warranty to users of your code about its stability, errorless, commercial value, etc.",
+                          "no": "You will not provide any warranty to users of your code about its stability, errorless, commercial value, etc, and so, would not be liable for any its disadvantage.",
+                          "children":[
+                            {
+                              "label": "yes",
+                              "question": "Do you wish to limit your liability against users of your source code",
+                              "yes": "You may limit your civil and monetary liability.",
+                              "no": "You are ready to be liable for any damages or losses of other people who use your code in accordance with applicable law.",
+                              "children":[
+                                {
+                                  "label": "yes",
+                                  "question": "Do you extremely need a short license?",
+                                  "yes": "Some licenses have a short text, which is enough for many use cases by other people. But they do not usually cover specific use cases (e.g. trademark and patents rights).",
+                                  "no": "You would like to cover by license text as many use cases as possible. And a long license text is not problem for you and your users.",
+                                  "children":[
+                                    {
+                                      "label": "yes",
+                                      "question": "Do you want to specify rules of your name usage to endorse or promote products derived from your source code?",
+                                      "yes": "You would like to specify rules on references to you as owner of your source code for promoting purposes.",
+                                      "no": "There is no necessity on references to you as owner of your source code for promoting purposes.",
+                                      "children":[
+                                        {
+                                          "label": "yes",
+                                          "question": null,
+                                          "license": "BSD 3-clause-license"
+                                        },
+                                        {
+                                          "label": "no",
+                                          "question": null,
+                                          "license": "MIT license"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "label": "no",
+                                      "question": "Do you wish require other users to distribute their product (with included your source code in it) under the same license terms as yours one?",
+                                      "yes": "You chose a license. A user created a software and included your source code in it. You may obliged him/her to distribute such his/her software under the same license as your own one.",
+                                      "no": "You chose a license. A user created a software and included your source code in it. You would like to provide such user a freedom of choice the license for his/her software.",
+                                      "children": [
+                                        {
+                                          "label": "yes",
+                                          "question": null,
+                                          "license": "own"
+                                        },
+                                        {
+                                          "label": "no",
+                                          "question": "Do you want to clearly specify in license text that you do not grant any trademark right related to your software?",
+                                          "yes": "You would like to specify in the license that you do not grant your trademark rights.",
+                                          "no": "You do not want to specify in the license that you do not grant your trademark rights.",
+                                          "children":[
+                                            {
+                                              "label": "yes",
+                                              "question": "Do you need to receive an express grant of patent rights from your contributors?",
+                                              "yes": "If you will receive patches and other contributions to your source code, you would like to receive patent rights from owners of such patches and contributions.",
+                                              "no": "There is no necessity to receive patent rights from owners of patches and contributions to your software.",
+                                              "children":[
+                                                {
+                                                  "label": "yes",
+                                                  "question": null,
+                                                  "license": "MPL 2.0"
+                                                },
+                                                {
+                                                  "label": "no",
+                                                  "question": null,
+                                                  "license": "own"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "label": "no",
+                                              "question": null,
+                                              "license": "own"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "no",
+                                  "question": null,
+                                  "license": "own"
+                                }
+                              ]
+                            },
+                            {
+                              "label": "no",
+                              "question": null,
+                              "license": "own"
+                            }
+                          ]
+                        },
+                        {
+                          "label": "no",
+                          "question": null,
+                          "license": "own"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "label": "no",
+                  "question": null,
+                  "license": "own"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "no",
+          "question": null,
+          "license": "own"
+        }
+      ]
+    },
+    {
+      "label": "no",
+      "question": null,
+      "license": "own"
+    }
+
+  ]
+}
