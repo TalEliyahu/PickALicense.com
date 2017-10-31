@@ -1,8 +1,8 @@
 @charset "utf-8";
 /*
-	Author: Filip Todorov - www.filiptodorov.com
-	Project: Pick a license
-	All rights reserved
+    Author: Filip Todorov - www.filiptodorov.com
+    Project: Pick a license
+    All rights reserved
 */
 @import url('https://fonts.googleapis.com/css?family=Raleway:800');
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700');
@@ -477,6 +477,29 @@ xmp {
 }
 .last-step p.smaller a {
     color: #00ABE7;
+}
+.nice-link {
+    display: inline-block;
+    width: 320px;
+    height: auto;
+    background: #00ABE7;
+    border: 1px solid #00ABE7;
+    padding: 5px 5px;
+    margin: 5px 0px;
+    border-radius: 4px;
+    color: #fff;
+}
+.nice-link:hover,
+.nice-link:focus {
+    border: 1px solid #00ABE7;
+    color: #00ABE7;
+    background: none;
+    text-decoration: none;
+}
+.nice-link i {
+    font-size: 14px;
+    opacity: 1;
+    margin: 0;
 }
 @media (max-width:768px) {
     .main {

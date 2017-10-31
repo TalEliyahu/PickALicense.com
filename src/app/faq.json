@@ -1,0 +1,24 @@
+{
+  "users":
+  [
+    {
+      "question": "Lorem ipsum",
+      "answer": "Lorem ipsum sit amet"
+    },
+    {
+      "question": "Lorem ipsum",
+      "answer": "Lorem ipsum sit amet"
+    }
+  ],
+  "owners":
+  [
+    {
+      "question": "Lorem ipsum",
+      "answer": "Lorem ipsum sit amet"
+    },
+    {
+      "question": "Lorem ipsum",
+      "answer": "Lorem ipsum sit amet"
+    }
+  ]
+}

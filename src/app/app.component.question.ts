@@ -1,47 +1,40 @@
 export class Question{
-  public yes: any
-  public no: any
-  public yes_hint: any
-  public no_hint: any
-  public answer: any
-  public question: any
-  public hasChilds: boolean
-  public jsonData: any
-  public license: any
-  constructor(){}
+  private q_number: any;
+  public jsonData: any;
+  public yes: any;
+  public no: any;
+  public answer = 'yes';
+  constructor(private core){}
 
   setData(jsonData:any){
     this.jsonData = jsonData;
-    this.yes_hint = jsonData.yes;
-    this.no_hint = jsonData.no
-    if (jsonData.question){
-      this.question = jsonData.question;
-
-      this.makeChilds();
-    } else{
-      this.license = jsonData.license
+    this.q_number = jsonData.question;
+    this.yes = jsonData.yes;
+    this.no = jsonData.no
+    if (typeof this.yes == 'object'){
+      this.yes = new Question(this.core);
+      this.yes.setData(this.jsonData.yes);
     }
-  }
-  makeChilds(){
-    if (this.jsonData.question){
-      this.jsonData.children.forEach((child:any) =>{
-        if (child.label.toLowerCase() == 'yes'){
-          this.yes = new Question();
-          this.yes.setData(child);
-        }else{
-          this.no = new Question();
-          this.no.setData(child);
-        }
-      })
-      this.hasChilds = true;
-    }else{
-      this.hasChilds = false;
+    if (typeof this.no == 'object'){
+      this.no = new Question(this.core);
+      this.no.setData(this.jsonData.no);
     }
   }
 
   getNext(){
-    if (this.hasChilds){
-      return this.answer == 'yes'? this.yes : this.no;
+    console.log(this[this.answer])
+    return this[this.answer];
   }
-}
+
+  getQuestion(){
+    return this.core.questionire[this.q_number].question;
+  }
+  getHint(){
+    return this.core.questionire[this.q_number][this.answer];
+  }
+
+  switch(){
+    this.answer = this.answer == 'yes'?'no':'yes';
+    console.log(this.answer);
+  }
 }
