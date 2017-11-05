@@ -20,7 +20,7 @@ export class AppComponent  {
   public answeredQuestions = [];
   public sidebarActive = false;
   public showOwnersFAQ = true;
-  public showUsersFAQ = false;
+  public showUsersFAQ = true;
   public faq_owners = [];
   public faq_users = [];
   constructor(private http: Http){
@@ -34,10 +34,13 @@ export class AppComponent  {
         this.hint = this.question.yes_hint;
       })
     })
-    http.get('../app/faq.json').subscribe((res: any) => {
+    http.get('../app/faq_users.json').subscribe((res: any) => {
       let data = res.json();
-      this.faq_owners = data.owners;
-      this.faq_users = data.users;
+      this.faq_users = data.faq;
+    })
+    http.get('../app/faq_owners.json').subscribe((res: any) => {
+      let data = res.json();
+      this.faq_owners = data.faq;
     })
   }
   setAnswer(){
@@ -92,30 +95,58 @@ export class AppComponent  {
   showUsers(){
     $('.users').addClass('active');
     $('.owners').removeClass('active');
-    this.showOwnersFAQ = false;
-    this.showUsersFAQ = true;
+
+    $("#projectOwners").hide();
+    $("#users").fadeIn();
   }
 
   showOwners(){
     $('.owners').addClass('active');
     $('.users').removeClass('active');
-    this.showOwnersFAQ = true;
-    this.showUsersFAQ = false;
+
+    $("#users").hide();
+    $("#projectOwners").fadeIn();
+
   }
 
   showAnswer(event){
     let id = event.srcElement.className;
+    let prev = $(".question.active span")
     let elem = $("#"+id)
+
+
     console.log(elem);
     let div = $("#div_"+id)
     if (elem.css('display') == 'none'){
       div.addClass('active')
       elem.slideToggle();
       elem.css('display', 'block');
+      if (prev != elem)
+        prev.slideToggle();
+        prev.parent().removeClass('active');
     }
     else{
       elem.slideToggle();
       div.removeClass('active');
     }
   }
+
+  ngOnInit(){
+    var script = document.createElement('script');
+    document.body.appendChild(script)
+    script.src = 'https://buttons.github.io/buttons.js'
+    $(document).click(function(e) {
+                var target = $(e.target), article;
+                if(!target.parents().is(".sidebar") && !target.is(".sidebar") && !target.is(".faq")) {
+                    if($(".sidebar").hasClass("active")) {
+                        $(".sidebar").removeClass("active");
+                    }
+                }
+            })
+
+  }
+  refresh(): void {
+    window.location.reload();
+}
+
  }

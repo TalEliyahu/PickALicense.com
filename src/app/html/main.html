@@ -22,6 +22,7 @@
         <script src="jquery-1.12.3.min.js"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="bootstrap.min.js"></script>
+        <!-- Place this tag in your head or just before your close body tag. -->
 
 
     </head>
@@ -30,11 +31,11 @@
 
         <div class="header">
             <div class="container">
-                <h1>Pick a license</h1>
+                <a href='#' (click)='refresh()'><h1>Pick a license</h1></a>
                 <h2>Pick and import the best license for your open source project</h2>
                 <div class="pull-right hidden-xs">
-                    <iframe src="https://ghbtns.com/github-btn.html?user=Singapore-Tech-Entrepreneurs&repo=Pick-A-License&type=watch&v=2" frameborder="0" scrolling="0" width="80px" height="20px"></iframe>
-                    <iframe src="https://ghbtns.com/github-btn.html?user=Singapore-Tech-Entrepreneurs&repo=Pick-A-License&type=star" frameborder="0" scrolling="0" width="80px" height="20px"></iframe>
+                    <a class="github-button" href="https://github.com/Singapore-Tech-Entrepreneurs/Pick-A-License/subscription" data-icon="octicon-eye" data-show-count="true" aria-label="Watch Singapore-Tech-Entrepreneurs/Pick-A-License on GitHub">Watch</a>
+                    <a class="github-button" href="https://github.com/Singapore-Tech-Entrepreneurs/Pick-A-License" data-icon="octicon-star" data-show-count="true" aria-label="Star Singapore-Tech-Entrepreneurs/Pick-A-License on GitHub">Star</a>
                 </div>
             </div>
         </div>
@@ -99,16 +100,16 @@
                 </ul>
                 <div class="questions">
                     <div id="projectOwners" *ngIf="showOwnersFAQ">
-                        <div class="question" [class.active] = 'faq_owners.indexOf(question) == 0' id='div_owners{{faq_owners.indexOf(question)}}' *ngFor="let question of faq_owners">
+                        <div class="question"  id='div_owners{{faq_owners.indexOf(question)}}' *ngFor="let question of faq_owners">
                             <b class="owners{{faq_owners.indexOf(question)}}" (click)="showAnswer($event)">{{question.question}}</b>
-                            <span *ngIf="faq_owners.indexOf(question) == 0" id="owners{{faq_owners.indexOf(question)}}" style="display: block;">{{question.answer}}</span>
+                            <span *ngIf="faq_owners.indexOf(question) == 0" id="owners{{faq_owners.indexOf(question)}}" >{{question.answer}}</span>
                             <span *ngIf="faq_owners.indexOf(question) != 0" id="owners{{faq_owners.indexOf(question)}}">{{question.answer}}</span>
                         </div>
                     </div>
-                    <div id='users' *ngIf="showUsersFAQ">
-                      <div class="question" [class.active] = 'faq_users.indexOf(question) == 0' id='div_users{{faq_users.indexOf(question)}}' *ngFor="let question of faq_users">
+                    <div id='users' style='display:none' *ngIf="showUsersFAQ">
+                      <div class="question"  id='div_users{{faq_users.indexOf(question)}}' *ngFor="let question of faq_users">
                           <b class="users{{faq_users.indexOf(question)}}" (click)="showAnswer($event)">{{question.question}}</b>
-                          <span *ngIf="faq_users.indexOf(question) == 0" id="users{{faq_users.indexOf(question)}}" style="display: block;">{{question.answer}}</span>
+                          <span *ngIf="faq_users.indexOf(question) == 0" id="users{{faq_users.indexOf(question)}}" >{{question.answer}}</span>
                           <span *ngIf="faq_users.indexOf(question) != 0" id="users{{faq_users.indexOf(question)}}">{{question.answer}}</span>
                       </div>
                     </div>

@@ -62,7 +62,7 @@
         "yes": {
           "question": "15",
           "yes": {
-            "question": "16",
+            "question": "12",
             "yes": "Apache 2.0",
             "no": "MPL 2.0"
           },
