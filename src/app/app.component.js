@@ -1,3 +1,19 @@
+/* Load main html and selector for this component is my-app */
+AppComponent = __decorate([
+    core_1.Component({
+        selector: 'my-app',
+        templateUrl: './html/main.html'
+    }),
+    __metadata("design:paramtypes", [http_1.Http])
+], AppComponent);
+exports.AppComponent = AppComponent;
+
+/* Include Angular Library for http request*/
+var core_1 = require("@angular/core");
+var http_1 = require("@angular/http");
+
+var app_component_question_1 = require("./app.component.question");
+
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -8,10 +24,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require("@angular/core");
-var http_1 = require("@angular/http");
-var app_component_question_1 = require("./app.component.question");
+
+/*get questions from api */
 var AppComponent = (function () {
+    
     function AppComponent(http) {
         var _this = this;
         this.http = http;
@@ -24,6 +40,8 @@ var AppComponent = (function () {
             _this.hint = _this.question.yes_hint;
         });
     }
+
+    /* set answers for particular questions */
     AppComponent.prototype.setAnswer = function () {
         this.question.answer = this.answer;
         var nextQuestion = this.question.getNext();
@@ -36,18 +54,25 @@ var AppComponent = (function () {
             this.setState('end');
         }
     };
+
+    /* Set No for all answer*/
     AppComponent.prototype.setNo = function () {
         this.answer = 'no';
         this.setAnswer();
     };
+
+    /* set current state */
     AppComponent.prototype.setState = function (state) {
-        console.log(state);
         this.state = state;
     };
+
+    /* switch button event click for on/off */
     AppComponent.prototype.switch = function () {
         this.answer = this.answer == 'yes' ? 'no' : 'yes';
         this.hint = this.answer == 'yes' ? this.question.yes_hint : this.question.no_hint;
     };
+
+    /* get license for download file */
     AppComponent.prototype.getLicense = function () {
         var licenses = {
             'GNU GPL v3': '../licenses/gnu-gplv3.txt',
@@ -61,12 +86,4 @@ var AppComponent = (function () {
     };
     return AppComponent;
 }());
-AppComponent = __decorate([
-    core_1.Component({
-        selector: 'my-app',
-        templateUrl: './html/main.html'
-    }),
-    __metadata("design:paramtypes", [http_1.Http])
-], AppComponent);
-exports.AppComponent = AppComponent;
 //# sourceMappingURL=app.component.js.map

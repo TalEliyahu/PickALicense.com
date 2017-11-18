@@ -23,12 +23,13 @@ export class AppComponent  {
   public showUsersFAQ = true;
   public faq_owners = [];
   public faq_users = [];
+  
+  /* Constructor load the questions http request and question response */
   constructor(private http: Http){
     http.get('../app/questionire.json').subscribe((res: any) =>{
       this.questionire = res.json();
       http.get('../app/decision-tree.json').subscribe((res:any) => {
         this.jsonData = res.json();
-        console.log(this.jsonData)
         this.question = new Question(this);
         this.question.setData(res.json());
         this.hint = this.question.yes_hint;
@@ -43,6 +44,8 @@ export class AppComponent  {
       this.faq_owners = data.faq;
     })
   }
+
+  /* Set Answers for the question till the end */
   setAnswer(){
     this.answeredQuestions.push(this.question);
     this.question = this.question.getNext()
@@ -50,11 +53,12 @@ export class AppComponent  {
       this.setState('end');
   }
 
+  /* get the state like which route you have */
   setState(state:any){
-    console.log(state);
     this.state = state;
   }
 
+  /* get license for download txt file*/
   getLicense(){
     let licenses = {
       'GPL v3': '../licenses/gnu-gplv3.txt',
@@ -78,9 +82,9 @@ export class AppComponent  {
     let license = licenses[this.question]
     if (license)
       return licenses[this.question];
-    console.log("No license file specified for " + this.question);
   }
 
+  /* Add or remove class to sidebar*/
   showSidebar(value){
     if (value){
       $('.sidebar').addClass('active');
@@ -89,9 +93,9 @@ export class AppComponent  {
     }
 
     this.sidebarActive = value;
-    console.log(this.sidebarActive)
   }
 
+  /* Add or remove class for active or owners or project users */
   showUsers(){
     $('.users').addClass('active');
     $('.owners').removeClass('active');
@@ -100,6 +104,7 @@ export class AppComponent  {
     $("#users").fadeIn();
   }
 
+  /* Add or remove class for active or owners or project owners */
   showOwners(){
     $('.owners').addClass('active');
     $('.users').removeClass('active');
@@ -109,13 +114,12 @@ export class AppComponent  {
 
   }
 
+  /*Show one by one answers on the right side of the page */
   showAnswer(event){
     let id = event.srcElement.className;
     let prev = $(".question.active span")
     let elem = $("#"+id)
 
-
-    console.log(elem);
     let div = $("#div_"+id)
     if (elem.css('display') == 'none'){
       div.addClass('active')
@@ -131,6 +135,7 @@ export class AppComponent  {
     }
   }
 
+  /* Load the script element form body and also when loads page remove the active class*/
   ngOnInit(){
     var script = document.createElement('script');
     document.body.appendChild(script)
