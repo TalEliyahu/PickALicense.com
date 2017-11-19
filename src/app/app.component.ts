@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Http } from '@angular/http';
+import { HttpClient } from '@angular/common/http';
 import { Question } from './app.component.question';
 
 declare var jquery: any;
@@ -25,23 +25,21 @@ export class AppComponent implements OnInit {
   public faq_users = [];
 
   /* Constructor load the questions http request and question response */
-  constructor(private http: Http) {
+  constructor(private http: HttpClient) {
     http.get('../app/questionire.json').subscribe((res1: any) => {
-      this.questionire = res1.json();
+      this.questionire = res1;
       http.get('../app/decision-tree.json').subscribe((res2: any) => {
-        this.jsonData = res2.json();
+        this.jsonData = res2;
         this.question = new Question(this);
-        this.question.setData(res2.json());
+        this.question.setData(res2);
         this.hint = this.question.yes_hint;
       });
     });
     http.get('../app/faq_users.json').subscribe((res: any) => {
-      const data = res.json();
-      this.faq_users = data.faq;
+      this.faq_users = res.faq;
     });
     http.get('../app/faq_owners.json').subscribe((res: any) => {
-      const data = res.json();
-      this.faq_owners = data.faq;
+      this.faq_owners = res.faq;
     });
   }
 
