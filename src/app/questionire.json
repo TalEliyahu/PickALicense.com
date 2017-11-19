@@ -1,54 +1,54 @@
 {
   "1": {
-    "question": "If your source code be included in proprietary software, does the source code of such distributed software need to be disclosed?",
+    "question": "Do you want to oblige a developer to disclose the source code of his/her own software, if such software includes your code?",
     "yes": "You may oblige other people to disclose source code of their own software if such software includes your own source code.",
     "no": "You may provide other people a freedom to solve: to disclose or not disclose the source code of their own software."
   },
 
   "2": {
-    "question": "If your code is dynamically linked with other parts of a software, do you allow other developers not to disclose the source code of such their software?",
+    "question": "Do you want to allow a developer do not disclose his/her source code in some cases?",
     "yes": "E.g. your source code is an library, and you really do not want to oblige users to disclose source code of that projects which used your library as an component.",
     "no": "You would like to oblige users disclose source code of their software in all cases if your code is included in their software."
   },
 
   "3": {
-    "question": "Do you want to add some formulations about patents?",
+    "question": "Do you want to add formulations about your patent rights on the code?",
     "yes": "Your license will contain formulations about patents and patent rights on your code.",
     "no": "Your license will not contain formulations about patents and patent rights on your code."
   },
 
   "4": {
-    "question": "If your code is included in third party software distributed via any network (including server-based software), do you want to oblige other developers to disclose the source code of such their software?",
+    "question": "Must a developer disclose source code of his/her software in case of its distribution via any network (including server-based software)?",
     "yes": "If user software (which includes your source code as an component) is a web-based software, you may oblige such user to disclose the source code of such software.",
     "no": "If user software (which includes your source code as an component) is a web-based software, you do not want to oblige such user to disclose the source code of such software."
   },
 
   "5": {
-    "question": "Do you extremely need a license for your source code with a short text which will contain terms and conditions in common words?",
+    "question": "Do you extremely need a license containing all applicable conditions for many use cases in short form?",
     "yes": "Some licenses have a short text, which is enough for many use cases by other people. But they do not usually cover specific use cases (e.g. trademark and patents rights).",
     "no": "You would like to cover by license text as many use cases as possible. And a long license text is not problem for you and your users."
   },
 
   "6": {
-    "question": "Do you require to mark made changes in case of modification of your source code?",
+    "question": "Must a developer clearly specify changes of your code in case of its modification?",
     "yes": "If somebody changes your code, he/she needs to state such changes (in any form, e.g. changelog, comments in source code, additional documentation file, etc.).",
     "no": "If somebody changes your code, he/she is not obliged to state such changes (in any form, e.g. changelog, comments in source code, etc.)."
   },
 
   "7": {
-    "question": "If your source code is included in third party software, does it need to include the info about your copyright and license terms related to your software in such third party software?",
+    "question": "Must a developer include your copyright and license info of your code in his/her software, if he/she includes your code in it?",
     "yes": "If anyone uses your code, he/she is obliged to inform other users that he/she really use your code by providing the info about your copyright and license related to such your source code. See a link about:license in your Firefox browser as an examplle.",
     "no": "If anyone uses your code, he/she may (but is not obliged) to inform other users that he/she really use your code by providing the info about your copyright and license related to such your source code."
   },
 
   "8": {
-    "question": "Do you want to specify in details the possible means of your code usage?",
+    "question": "Do you want to specify possible means of your code usage in details?",
     "yes": "Your license will contain the info about possible means of your code usage (e.g. to use, merge, distribute, etc.)",
     "no": "Your license will not contain the info about possible means of your code usage (e.g. to use, merge, distribute, etc.)"
   },
 
   "9": {
-    "question": "Do you want to clearly specify in a license that you really allow to use your code in commercial and/or non-commercial purposes?",
+    "question": "Do you want to specify that you really allow to use your code in commercial and/or non-commercial purposes?",
     "yes": "Your license will clearly inform your users that they are allowed to use your code in both purposes (commercial or non-commercial).",
     "no": "Your license will not inform your users that they are allowed to use your code in both purposes (commercial or non-commercial)."
   },
@@ -60,31 +60,25 @@
   },
 
   "11": {
-    "question": "Do you want to clearly specify in a license that you do not grant any trademark rights to users of your source code?",
+    "question": "Do you want to specify that you do not grant any trademark right?",
     "yes": "Your license will clearly inform that you do not grant any trademark rights on your source code.",
     "no": "Your license will not inform that you do not grant any trademark rights on your source code."
   },
 
   "12": {
-    "question": "Do you require to mark made changes in case of modification?",
+    "question": "Do you want to oblige a developer to specify changes of your code in case of its modification by him/her?",
     "yes": "If somebody changes your code, he/she needs to state such changes (in any form, e.g. changelog, comments in source code, additional documentation file, etc.).",
     "no": "If somebody changes your code, he/she is not obliged to state such changes (in any form, e.g. changelog, comments in source code, etc.)."
   },
 
   "13": {
-    "question": "Do you want to oblige users to defend you and other contributors of your open source code from lawsuits in case of usage by such users your code in commercial purposes?",
+    "question": "Must a developer defend you from lawsuits in case of usage by him/her your code in commercial purposes?",
     "yes": "You may oblige users to defend you and your contributors to hold you from lawsuits.",
     "no": "Your license will not contain such protection."
   },
 
   "14": {
-    "question": "Do you want to clearly specify in license text that you do not grant any trademark right related to your software?",
-    "yes": "You would like to specify in the license that you do not grant your trademark rights.",
-    "no": "You do not want to specify in the license that you do not grant your trademark rights."
-  },
-
-  "15": {
-    "question": "Do you need to receive an express grant of patent rights from your contributors?",
+    "question": "Do you need to receive an express grant of patent rights from your contributors to you?",
     "yes": "If you will receive patches and other contributions to your source code, you would like to receive patent rights from owners of such patches and contributions.",
     "no": "There is no necessity to receive patent rights from owners of patches and contributions to your software."
   }
