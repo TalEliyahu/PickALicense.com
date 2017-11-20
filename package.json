@@ -31,7 +31,8 @@
     "jquery": "^3.2.1",
     "rxjs": "^5.5.2",
     "typescript": "2.4.2",
-    "zone.js": "^0.8.18"
+    "zone.js": "^0.8.18",
+    "webpack": "^3.8.1"
   },
   "devDependencies": {
     "@types/jasmine": "2.8.2",
@@ -47,7 +48,6 @@
     "karma-jasmine-html-reporter": "^0.2.2",
     "protractor": "~5.2.0",
     "ts-node": "~3.3.0",
-    "tslint": "~5.8.0",
-    "webpack": "^3.8.1"
+    "tslint": "~5.8.0"
   }
 }
