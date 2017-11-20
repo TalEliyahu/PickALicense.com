@@ -5,13 +5,12 @@
   "scripts": {
     "ng": "ng",
     "dev": "ng serve",
-    "start": "node server.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "heroku-postbuild": "ng build --aot -prod",
-    "deploy": "git push origin master && git push heroku master"
+    "postinstall": "ng build --aot -prod",
+    "start": "node server.js"
   },
   "private": true,
   "dependencies": {
@@ -50,9 +49,5 @@
     "tslint": "~5.8.0",
     "typescript": "2.4.2",
     "webpack": "^3.8.1"
-  },
-  "engines": {
-    "node": "6.9.2",
-    "yarn": "3.10.9"
   }
 }
