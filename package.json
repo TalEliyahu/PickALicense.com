@@ -5,13 +5,12 @@
   "scripts": {
     "ng": "ng",
     "dev": "ng serve",
-    "start": "node server.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "heroku-postbuild": "ng build --aot -prod",
-    "deploy": "git push origin master && git push heroku master"
+    "postinstall": "ng build --aot -prod",
+    "start": "node server.js"
   },
   "private": true,
   "dependencies": {
@@ -31,7 +30,9 @@
     "font-awesome": "^4.7.0",
     "jquery": "^3.2.1",
     "rxjs": "^5.5.2",
-    "zone.js": "^0.8.18"
+    "typescript": "2.4.2",
+    "zone.js": "^0.8.18",
+    "webpack": "^3.8.1"
   },
   "devDependencies": {
     "@types/jasmine": "2.8.2",
@@ -47,12 +48,6 @@
     "karma-jasmine-html-reporter": "^0.2.2",
     "protractor": "~5.2.0",
     "ts-node": "~3.3.0",
-    "tslint": "~5.8.0",
-    "typescript": "2.4.2",
-    "webpack": "^3.8.1"
-  },
-  "engines": {
-    "node": "6.9.2",
-    "yarn": "3.10.9"
+    "tslint": "~5.8.0"
   }
 }
