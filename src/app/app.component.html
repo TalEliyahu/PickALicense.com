@@ -1,3 +1,89 @@
-<h1>
-  {{title}}
-</h1>
+<div class="header">
+    <div class="container">
+        <a href='#' (click)='refresh()'><h1>Pick a license</h1></a>
+        <h2>Pick and import the best license for your open source project</h2>
+        <div class="pull-right hidden-xs">
+            <a class="github-button" href="https://github.com/Singapore-Tech-Entrepreneurs/PickALicense.com/subscription" data-icon="octicon-eye" data-show-count="true" aria-label="Watch Singapore-Tech-Entrepreneurs/PickALicense.com on GitHub">Watch</a>
+            <a class="github-button" href="https://github.com/Singapore-Tech-Entrepreneurs/PickALicense.com" data-icon="octicon-star" data-show-count="true" aria-label="Star Singapore-Tech-Entrepreneurs/PickALicense.com on GitHub">Star</a>
+        </div>
+    </div>
+</div>
+
+
+<div class="main">
+    <div class="container">
+      <div class ='main-questions'>
+      <div *ngIf="state=='beginning'">
+          <h1>It's easy to get caught up in code.</h1>
+          <p class="explanation1">Sharing your code isn't everything, though: it's also <span>!important</span> to tell people how they can use that code.</p>
+          <div class="buttons">
+              <a (click)="setState('quiz')" class="btn btn-primary btn-lg">Ok, Let's start!</a>
+              <a (click)='showSidebar(true) 'href="#" class="btn btn-default faq">I am confused. What should I do?</a>
+
+          </div>
+      </div>
+      <div *ngIf="state=='quiz'">
+          <div class="main-question active" style="display: block;">
+              <h3>{{question.getQuestion()}}</h3>
+              <div class="material-switch">
+                  <input *ngIf="question.answer == 'yes'" (click)='question.switch()' id="question1" name="question1" type="checkbox" checked/>
+                  <input *ngIf="question.answer == 'no'" (click)='question.switch()' id="question1" name="question1" type="checkbox"/>
+                  <label for="question1" class="label-default"></label>
+              </div>
+           <div class="explanation">
+                  <div class="yes">{{question.getHint()}}</div>
+              </div>
+
+          </div>
+          <div (click)="setAnswer()" class="buttons v2 btn btn-primary btn-lg">Next Step</div>
+      </div>
+      <div *ngIf="state=='end'">
+        <div *ngIf="question != 'own'">
+            <h2>License Generated</h2>
+            <p>The most recommended license for you is <b>{{question}}</b>.</p>
+            <a href="{{getLicense()}}" class="nice-link" download><i class="fa fa-fw fa-download"></i>Download the license to your computer</a>
+        </div>
+        <div *ngIf="question == 'own'">
+          <h2>You need your own license</h2>
+        </div>
+      </div>
+    </div>
+    <div class='answered-questions pull-right'>
+      <div class="answered-question" *ngFor="let answered of answeredQuestions">
+        <h3>{{answered.getQuestion()}}</h3>
+        <div class="material-switch smaller">
+
+          <input *ngIf="answered.answer=='yes'" id="{{answered.question}}" name="{{answered.question}}" type="checkbox" checked/>
+          <input *ngIf="answered.answer=='no'" id="{{answered.question}}" name="{{answered.question}}" type="checkbox"/>
+          <label for="{{answered.getQuestion()}}'" class="label-default"></label>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class='sidebar'>
+    <a (click)= 'showSidebar(false)'href='#' class='closeSidebar'></a>
+    <ul class="tabs">
+            <li class="active owners"><a (click)='showOwners()' href="#">Project Owners</a></li><!--
+         --><li class='users'><a (click)='showUsers()' href="#">Users</a></li>
+        </ul>
+        <div class="questions">
+            <div id="projectOwners" *ngIf="showOwnersFAQ">
+                <div class="question"  id='div_owners{{faq_owners.indexOf(question)}}' *ngFor="let question of faq_owners">
+                    <b class="owners{{faq_owners.indexOf(question)}}" (click)="showAnswer($event)">{{question.question}}</b>
+                    <span *ngIf="faq_owners.indexOf(question) == 0" id="owners{{faq_owners.indexOf(question)}}" >{{question.answer}}</span>
+                    <span *ngIf="faq_owners.indexOf(question) != 0" id="owners{{faq_owners.indexOf(question)}}">{{question.answer}}</span>
+                </div>
+            </div>
+            <div id='users' style='display:none' *ngIf="showUsersFAQ">
+              <div class="question"  id='div_users{{faq_users.indexOf(question)}}' *ngFor="let question of faq_users">
+                  <b class="users{{faq_users.indexOf(question)}}" (click)="showAnswer($event)">{{question.question}}</b>
+                  <span *ngIf="faq_users.indexOf(question) == 0" id="users{{faq_users.indexOf(question)}}" >{{question.answer}}</span>
+                  <span *ngIf="faq_users.indexOf(question) != 0" id="users{{faq_users.indexOf(question)}}">{{question.answer}}</span>
+              </div>
+            </div>
+        </div>
+
+  </div>
+
+</div>
