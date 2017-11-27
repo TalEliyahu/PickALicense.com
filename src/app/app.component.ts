@@ -7,7 +7,7 @@ declare var $: any;
 
 @Component({
   selector: 'app-root',
-  templateUrl: './html/main.html',
+  templateUrl: './app.component.html',
 })
 export class AppComponent implements OnInit {
   private jsonData: any;
