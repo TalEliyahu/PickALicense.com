@@ -1,6 +1,6 @@
 import { AngularCliHerokuPage } from './app.po';
 
-describe('angular-cli-heroku App', () => {
+describe('pickalicense App', () => {
   let page: AngularCliHerokuPage;
 
   beforeEach(() => {

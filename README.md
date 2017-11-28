@@ -1,4 +1,4 @@
-# Angular-CLI-Heroku
+# PickALicense
 [![Build Status](https://travis-ci.org/Singapore-Tech-Entrepreneurs/Pick-A-License.svg?branch=master)](https://travis-ci.org/Singapore-Tech-Entrepreneurs/Pick-A-License)  [![Heroku](https://heroku-badge.herokuapp.com/?app=heroku-badge&style=flat)](https://salty-everglades-70614.herokuapp.com/)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.1.

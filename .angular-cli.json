@@ -1,7 +1,7 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "project": {
-    "name": "angular-cli-heroku"
+    "name": "pickalicense"
   },
   "apps": [
     {
@@ -9,7 +9,6 @@
       "outDir": "dist",
       "assets": [
         "assets",
-        "favicon.ico",
         "app",
         "licenses",
         "fonts"
