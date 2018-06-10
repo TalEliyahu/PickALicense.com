@@ -46,8 +46,3 @@ Run `npm run release` which executes [`standard-version`](https://github.com/con
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
-## Contributors
-
-Design by Filip Todorov @ www.filiptodorov.com
-
-Bug fixes by Bernard K. www.github.com/benkags
