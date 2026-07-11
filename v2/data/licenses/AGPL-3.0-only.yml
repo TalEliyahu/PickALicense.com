@@ -1,0 +1,15 @@
+id: AGPL-3.0-only
+name: GNU Affero General Public License v3.0 only
+osiApproved: true
+category: network-copyleft
+copyleftScope: network
+allowsClosedSourceUse: no
+explicitPatentGrant: true
+sources:
+  spdx: https://spdx.org/licenses/AGPL-3.0-only.html
+  chooseALicense: https://choosealicense.com/licenses/agpl-3.0/
+  steward: https://www.gnu.org/licenses/agpl-3.0.html
+review:
+  status: unreviewed
+  reviewedAt:
+  notes: Initial structured draft. Needs external legal-content review.

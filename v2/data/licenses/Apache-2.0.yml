@@ -1,0 +1,14 @@
+id: Apache-2.0
+name: Apache License 2.0
+osiApproved: true
+category: permissive
+copyleftScope: none
+allowsClosedSourceUse: yes
+explicitPatentGrant: true
+sources:
+  spdx: https://spdx.org/licenses/Apache-2.0.html
+  chooseALicense: https://choosealicense.com/licenses/apache-2.0/
+review:
+  status: unreviewed
+  reviewedAt:
+  notes: Initial structured draft. Needs external legal-content review.

@@ -1,0 +1,14 @@
+id: MPL-2.0
+name: Mozilla Public License 2.0
+osiApproved: true
+category: file-copyleft
+copyleftScope: file
+allowsClosedSourceUse: conditional
+explicitPatentGrant: true
+sources:
+  spdx: https://spdx.org/licenses/MPL-2.0.html
+  chooseALicense: https://choosealicense.com/licenses/mpl-2.0/
+review:
+  status: unreviewed
+  reviewedAt:
+  notes: Initial structured draft. Needs external legal-content review.

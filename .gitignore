@@ -7,6 +7,10 @@
 
 # dependencies
 /node_modules
+v2/node_modules
+v2/dist
+v2/**/dist-types
+v2/**/*.tsbuildinfo
 
 # IDEs and editors
 /.idea

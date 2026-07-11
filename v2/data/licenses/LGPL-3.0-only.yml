@@ -1,0 +1,15 @@
+id: LGPL-3.0-only
+name: GNU Lesser General Public License v3.0 only
+osiApproved: true
+category: library-copyleft
+copyleftScope: library
+allowsClosedSourceUse: conditional
+explicitPatentGrant: true
+sources:
+  spdx: https://spdx.org/licenses/LGPL-3.0-only.html
+  chooseALicense: https://choosealicense.com/licenses/lgpl-3.0/
+  steward: https://www.gnu.org/licenses/lgpl-3.0.html
+review:
+  status: unreviewed
+  reviewedAt:
+  notes: Initial structured draft. Needs external legal-content review.

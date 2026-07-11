@@ -1,0 +1,15 @@
+id: GPL-3.0-only
+name: GNU General Public License v3.0 only
+osiApproved: true
+category: strong-copyleft
+copyleftScope: distributed-work
+allowsClosedSourceUse: no
+explicitPatentGrant: true
+sources:
+  spdx: https://spdx.org/licenses/GPL-3.0-only.html
+  chooseALicense: https://choosealicense.com/licenses/gpl-3.0/
+  steward: https://www.gnu.org/licenses/gpl-3.0.html
+review:
+  status: unreviewed
+  reviewedAt:
+  notes: Initial structured draft. Needs external legal-content review.

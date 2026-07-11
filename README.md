@@ -1,4 +1,32 @@
 # PickALicense
+
+## v2 foundation
+
+The revived PickALicense v2 foundation lives in `v2/`. It keeps the legacy Angular app intact and adds a modern, reviewable TypeScript workspace for:
+
+- a pure recommendation engine,
+- SPDX-based license profiles,
+- plain-language questions,
+- scenario tests,
+- and a minimal accessible questionnaire UI.
+
+Run it locally:
+
+```bash
+cd v2
+npm install
+npm run dev
+```
+
+Quality gates:
+
+```bash
+cd v2
+npm run lint
+npm run typecheck
+npm test
+npm run build
+```
 [![Build Status](https://travis-ci.org/Singapore-Tech-Entrepreneurs/Pick-A-License.svg?branch=master)](https://travis-ci.org/Singapore-Tech-Entrepreneurs/Pick-A-License)  [![Heroku](https://heroku-badge.herokuapp.com/?app=heroku-badge&style=flat)](https://salty-everglades-70614.herokuapp.com/)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.1.
@@ -45,4 +73,3 @@ Run `npm run release` which executes [`standard-version`](https://github.com/con
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-
