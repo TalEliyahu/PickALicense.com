@@ -1,5 +1,9 @@
 # PickALicense
 
+**Live tool: <https://picklicense.com>**
+
+Answer plain-language questions and get a best-fit licence for your code, documentation, images, audio, or video, together with the obligations it carries. Free, no signup, and your answers stay in your browser.
+
 ## v2 foundation
 
 The revived PickALicense v2 foundation lives in `v2/`. It keeps the legacy Angular app intact and adds a modern, reviewable TypeScript workspace for:
